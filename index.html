@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <div class="display" id="display">00:00:00.00</div>
+        <div class="controls">
+            <button id="startBtn" class="btn start">Start</button>
+            <button id="stopBtn" class="btn stop">Stop</button>
+            <button id="lapBtn" class="btn lap">Lap</button>
+            <button id="resetBtn" class="btn reset">Reset</button>
+        </div>
+        <button id="saveBtn" class="btn save">Save Session to Backend</button>
+        <ul class="laps-list" id="laps"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

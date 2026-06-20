@@ -1,0 +1,132 @@
+.stopwatch-container {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  width: 380px;
+  text-align: center;
+}
+
+.title {
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.time-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.time-display .ms {
+  font-size: 2rem;
+  color: #38bdf8;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.start-btn.start {
+  background-color: #10b981;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.start-btn.stop {
+  background-color: #ef4444;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+}
+
+.reset-btn, .lap-btn {
+  background-color: #334155;
+  color: #cbd5e1;
+}
+
+.reset-btn:hover:not(.disabled), .lap-btn:hover:not(.disabled) {
+  background-color: #475569;
+  color: #fff;
+}
+
+.btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Laps Styles */
+.laps-container {
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for laps */
+.laps-container::-webkit-scrollbar {
+  width: 6px;
+}
+.laps-container::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+.laps-header {
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.laps-list {
+  list-style: none;
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+}
+
+.lap-number {
+  color: #64748b;
+}
+
+.lap-time {
+  color: #e2e8f0;
+}
